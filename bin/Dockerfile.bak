@@ -31,4 +31,4 @@ RUN echo "echo gotest start from cmd"
 EXPOSE 80  12345
 
 #CMD 运行以下命令
-CMD ["/usr/local/gotest"]
+CMD ["./gotest"]
