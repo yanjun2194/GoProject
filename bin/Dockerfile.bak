@@ -19,7 +19,7 @@ ADD ./linux_amd64/gotest /usr/local/
 #RUN useradd -s /sbin/nologin -M www
 
 #WORKDIR Ïàµ±ÓÚcd
-#WORKDIR /usr/local/nginx-1.8.0 
+WORKDIR /usr/local
 
 #RUN ./configure --prefix=/usr/local/nginx --user=www --group=www --with-http_ssl_module --with-pcre && make && make install
 

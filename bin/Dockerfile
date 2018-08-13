@@ -11,7 +11,7 @@ MAINTAINER yjzaho
 #ENV PATH /usr/local/nginx/sbin:$PATH
 
 #ADD  文件放在当前目录下，拷过去会自动解压
-ADD ./linux_amd64/gotest /usr/local/  
+ADD ./linux_amd64/gotest /home/yjzhao/  
 
 #RUN 执行以下命令 
 #RUN rpm -ivh /usr/local/epel-release-latest-7.noarch.rpm
@@ -19,7 +19,7 @@ ADD ./linux_amd64/gotest /usr/local/
 #RUN useradd -s /sbin/nologin -M www
 
 #WORKDIR 相当于cd
-#WORKDIR /usr/local/nginx-1.8.0 
+WORKDIR /home/yjzhao
 
 #RUN ./configure --prefix=/usr/local/nginx --user=www --group=www --with-http_ssl_module --with-pcre && make && make install
 
@@ -31,4 +31,4 @@ RUN echo "echo gotest start from cmd"
 EXPOSE 80  12345
 
 #CMD 运行以下命令
-CMD ["/usr/local/gotest"]
+CMD ["./gotest"]
